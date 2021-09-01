@@ -1,0 +1,2 @@
+class AsanasController < ApplicationController
+end
