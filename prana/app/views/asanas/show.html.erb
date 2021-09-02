@@ -1,0 +1,12 @@
+<h1>Asana Name: <%= @asana.asana_name %></h1>
+<h2>Asana Type: <%= @asana.asana_type %></h2>
+<h3>Target Area: <%= @asana.target_general %></h3>
+<h3>Target Body Part: <%= @asana.target_specific %></h3>
+<h3>Difficulty: <%= @asana.difficulty %></h3>
+<h3>Duration: <%= @asana.duration %></h3>
+<form action="/asanas/<%= @asana.id%>/edit">
+    <input type="submit" value="Edit">
+</form>
+<form action="/asanas/new">
+    <input type="submit" value="Add an Asana">
+</form>

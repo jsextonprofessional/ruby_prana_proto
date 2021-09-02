@@ -1,0 +1,76 @@
+<h1 class="text-center">Search Asanas: </h1><br><br>
+<form action="/asanas/show">
+    
+</form>
+
+<h1 class="text-center">Add a new asana to the database: </h1><br><br>
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+        <h4><%= error%></h4>
+    <% end %>
+<% end %>
+<form action="/asanas" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <label>Asana Name:</label>
+    <input type="text" name="asana[asana_name]" placeholder="asana name"><br><br>
+    <label>Asana Type: </label><br><br>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="asana[asana_type]" id="flexRadioDefault1" value="breathing">
+        <label class="form-check-label" for="flexRadioDefault1">
+        breathing
+        </label>
+    </div><br><br>
+    <label>General Body Area:</label><br><br>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="asana[target_general]" id="flexRadioDefault1" value="face">
+        <label class="form-check-label" for="flexRadioDefault1">
+        face
+        </label>
+    </div><br><br>
+    <label>Specific Body Part:</label><br><br>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="asana[target_specific]" id="flexRadioDefault1" value="eyes">
+        <label class="form-check-label" for="flexRadioDefault1">
+        eyes
+        </label>
+    </div><br><br>
+    <label>Difficulty Level:</label><br><br>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="asana[difficulty]" id="flexRadioDefault1" value="easy">
+        <label class="form-check-label" for="flexRadioDefault1">
+        easy
+        </label>
+    </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="asana[difficulty]" id="flexRadioDefault1" value="intermediate">
+        <label class="form-check-label" for="flexRadioDefault1">
+        intermediate
+        </label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="asana[difficulty]" id="flexRadioDefault1" value="advanced">
+        <label class="form-check-label" for="flexRadioDefault1">
+        advanced
+        </label>
+    </div><br><br>
+    <label>Duration:</label><br><br>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="asana[duration]" id="flexRadioDefault1" value="5">
+        <label class="form-check-label" for="flexRadioDefault1">
+        5 minutes
+        </label>
+    </div>
+        <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="asana[duration]" id="flexRadioDefault1" value="15">
+        <label class="form-check-label" for="flexRadioDefault1">
+        15 minutes
+        </label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="asana[duration]" id="flexRadioDefault1" value="30">
+        <label class="form-check-label" for="flexRadioDefault1">
+        30 minutes
+        </label>
+    </div><br><br>
+    <input type="submit" value="Create">
+</form>

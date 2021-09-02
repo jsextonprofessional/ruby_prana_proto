@@ -1,0 +1,20 @@
+<table class="table table-bordered border-primary">
+    <tr>
+        <th>Asana Name</th>
+        <th>Asana Type</th>
+        <th>Target Area</th>
+        <th>Target Body Part</th>
+        <th>Difficulty</th>
+        <th>Duration</th>
+    </tr>
+    <%= @asanas.each do |asana| %>
+    <tr class="border-5">
+        <td ><%= asana.asana_name %></td>
+        <td><%= asana.asana_type %></td>
+        <td><%= asana.target_general %></td>
+        <td><%= asana.target_specific %></td>
+        <td><%= asana.difficulty %></td>
+        <td><%= asana.duration %></td>
+    </tr>
+    <% end %>
+</table>
