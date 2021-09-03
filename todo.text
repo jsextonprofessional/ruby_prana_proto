@@ -1,0 +1,37 @@
+# MVP - DO FIRST #
+> build front end - draw wireframes
+> rely on bootstrap, layouts and partials as much as possible
+> test each route
+> build front end for show/edit/destroy 
+> write controller functionality for asanas new/create/show/edit/destroy
+> fine tune front end
+> create walkthru video of this app
+> create db entries to fill out db
+> add validations to models and forms (if / elsif in controller)
+> prefill checkboxes/radios on edit
+> add navbar partial to display on each page
+> why all the extra text on the show_all page?
+
+# ADVANCED - DO LATER #
+> add users model - include login/reg, sessions, validations, bcrypt
+> adv - add admin capabilities
+> adv - build form for new wkout_session
+> adv - write unit tests
+> make the /new form more dynamic and interactive
+> advanced - give user option to create list of asanas and call it routine or wkout_session or somesuch.
+> provide nightmode
+> create another walkthru vid
+> deploy and advertise
+> add search and autocomplete features
+> add js alert before deleting and updating record
+> figure out the authenticity_token stuff for destroys
+> manage redirects for unauthorized routes
+
+# IDK #
+> figure out how to add multiple entries for single column in single record, like hashtags. is it polymorph? is it self join?? maybe branch out away from sqlite
+> how do I edit a model without starting over? how does it affect existing records? 
+> understand nested routes
+
+# BRAINSTORM #
+> aesthetic should be cutesie
+> nightmode should be soft

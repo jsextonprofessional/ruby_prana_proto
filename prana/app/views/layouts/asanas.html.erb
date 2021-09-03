@@ -8,13 +8,14 @@
     <%= csrf_meta_tags %>
 </head>
 <body>
-    <div class="container-fluid align-self-center justify-content-center">
+    <div class="container-fluid align-self-center justify-content-center border border-success">
     <%= render "shared/navbar" %>
-        <div class="row justify-content-center">
-            <div class="col-8 align-self-center justify-content-center">
+        <div class="row justify-content-center border border-warning">
+            <div class="col-8 align-self-center justify-content-center border border-danger">
                 <%= yield %>
             </div>
         </div>
+        <%= render "shared/copyright" %>
     </div>
 </body>
-
+<%= render "shared/ascii_sig" %>

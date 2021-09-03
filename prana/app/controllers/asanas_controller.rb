@@ -28,6 +28,27 @@ class AsanasController < ApplicationController
         @asanas = Asana.all
     end
 
+    def search
+        
+    end
+
+    def search_by_asana_name
+        @asana = Asana.find_by(asana_name: '')
+        redirect_to "/asanas/search/results"
+    end
+
+    def search_by_asana_type
+        @asana = Asana.all
+        redirect_to "/asanas/search/results"
+    end
+
+    def search_by_body_part
+        redirect_to "/asanas/search/results"
+    end
+
+    def search_results
+    end
+
     def edit
         @asana = Asana.find(params[:id])
     end
