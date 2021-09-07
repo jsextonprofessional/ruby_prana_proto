@@ -8,10 +8,10 @@
     <%= csrf_meta_tags %>
 </head>
 <body>
-    <div class="container-fluid align-self-center justify-content-center border border-success">
+    <div class="container-fluid align-self-center justify-content-center border border-white" style="background-color: ccccff;">
     <%= render "shared/navbar" %>
-        <div class="row justify-content-center border border-warning">
-            <div class="col-8 align-self-center justify-content-center border border-danger">
+        <div class="row justify-content-center mx-auto">
+            <div class="col-8 align-self-center justify-content-center border border-5 border-white min-vh-100 bg-info" style="--bs-bg-opacity: .1">
                 <%= yield %>
             </div>
         </div>
