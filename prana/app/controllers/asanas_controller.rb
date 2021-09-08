@@ -3,7 +3,7 @@ class AsanasController < ApplicationController
     skip_before_action :verify_authenticity_token
     
     def index
-    
+        @asanas = Asana.all
     end
 
     def new
