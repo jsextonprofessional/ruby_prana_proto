@@ -1,7 +1,7 @@
 <h1 class="text-center m-5">Search By...</h1>
 <form action="/asanas/search/by_asana_name" class="m-5 p-3">
     <h5>Asana Name: </h5>
-    <input type="text" name="asana[asana_name]" value="asana name">
+    <input type="text" name="asana[asana_name]" value="<%= @asana.asana_name %>">
     <input type="submit" value="Go" class="m-2">
 </form>
 

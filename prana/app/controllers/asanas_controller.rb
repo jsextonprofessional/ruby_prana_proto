@@ -29,7 +29,8 @@ class AsanasController < ApplicationController
     end
 
     def search
-        
+        @asanas = Asana.where(["asana_name LIKE ?", "%params[asana_paramas]%"])
+        # redirect_to "/asanas/search/results"
     end
 
     def search_by_asana_name
@@ -47,6 +48,7 @@ class AsanasController < ApplicationController
     end
 
     def search_results
+        @asanas = Asana.all
     end
 
     def edit
@@ -62,7 +64,7 @@ class AsanasController < ApplicationController
     def destroy
         @asana = Asana.find(params[:id])
         @asana.destroy
-        redirect_to "/asanas"
+        redirect_to "/asanas/show/all"
     end
 
     private

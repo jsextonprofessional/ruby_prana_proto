@@ -7,17 +7,34 @@
             <th scope="col">Target Body Part</th>
             <th scope="col">Difficulty</th>
             <th scope="col">Duration</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
         </tr>
     </thead>
     <tbody>
     <% @asanas.each do |asana| %>
         <tr>
-            <td><%= asana.asana_name%></td>
+            <td>
+            <a href="/asanas/<%= asana.id%>">
+                <%= asana.asana_name%></td>
+            </a>
             <td><%= asana.asana_type%></td>
             <td><%= asana.target_general%></td>
             <td><%= asana.target_specific%></td>
             <td><%= asana.difficulty%></td>
             <td><%= asana.duration%></td>
+            <td>
+                <form action="/asanas/<%= asana.id %>/edit">
+                    <input type="submit" value="Δ">
+                </form>
+            </td>
+            <td>
+                <form action="/asanas/<%= asana.id %>" method="POST">
+                    <input type="hidden" name="_method" value="delete">
+                    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+                    <input type="submit" value="X">
+                </form>
+            </td>
         </tr>
     <% end %>
     </tbody>
