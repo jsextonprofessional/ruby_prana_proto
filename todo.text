@@ -2,15 +2,12 @@
 > build front end - draw wireframes
 > rely on bootstrap, layouts and partials as much as possible
 > test each route
-> build front end for show/edit/destroy 
-> write controller functionality for asanas new/create/show/edit/destroy
 > fine tune front end
+> build front end for show/edit/destroy 
 > create walkthru video of this app
-> create db entries to fill out db
+> deploy
 > add validations to models and forms (if / elsif in controller)
 > prefill checkboxes/radios on edit
-> add navbar partial to display on each page
-> why all the extra text on the show_all page?
 
 # ADVANCED - DO LATER #
 > add users model - include login/reg, sessions, validations, bcrypt
@@ -24,7 +21,6 @@
 > deploy and advertise
 > add search and autocomplete features
 > add js alert before deleting and updating record
-> figure out the authenticity_token stuff for destroys
 > manage redirects for unauthorized routes
 
 # IDK #
@@ -35,3 +31,10 @@
 # BRAINSTORM #
 > aesthetic should be cutesie
 > nightmode should be soft
+
+# COMPLETED TASKS #
+DONE > write controller functionality for asanas new/create/show/edit/destroy
+DONE > create db entries to fill out db
+DONE > why all the extra text on the show_all page?
+DONE > add navbar partial to display on each page
+DONE > figure out the authenticity_token stuff for destroys
