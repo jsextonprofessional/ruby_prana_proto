@@ -1,26 +1,26 @@
-<h1>Search Asanas</h1>
+<h1 class="text-center m-5">Search Asanas By...</h1>
 
 <%= form_for @search, html: {class: "pure-form"} do |s| %>
 
-    <div class="field">
-        <%= s.label :keywords %><br />
+    <div class="field m-5 p-3">
+        <%= s.label :keywords, "Keywords:" %><br>
         <%= s.text_field :keywords %>
     </div>
 
-    <div class="field">
-        <p><%= s.label :asana_name, "Asana Name" %> - <%= s.text_field :asana_type, size: 25 %></p>
+    <div class="field m-5 p-3">
+        <%= s.label :asana_name, "Asana Name:" %><br> 
+        <%= s.text_field :asana_type, size: 25 %>
     </div>
 
-    <div class="field">
-        <p><%= s.label :asana_type, "Asana Type" %> - <%= s.text_field :asana_type, size: 25 %></p>
+    <div class="field m-5 p-3">
+        <%= s.label :asana_type, "Asana Type" %><br><%= s.text_field :asana_type, size: 25 %>
     </div>
 
-    <div class="field">
-        <p><%= s.label :target_general, "General Body Area" %> - <%= s.text_field :target_specific, size: 25 %></p>
+    <div class="field m-5 p-3">
+        <%= s.label :target_general, "General Body Area" %><br> <%= s.text_field :target_specific, size: 25 %>
     </div>
 
-
-    <div class="actions">
+    <div class="actions m-5">
         <%= s.submit "Search", class: "pure-button pure-button-primary" %>
     </div>
 
