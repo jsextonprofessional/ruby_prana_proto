@@ -1,0 +1,29 @@
+<h1>Search Asanas</h1>
+
+<%= form_for @search, html: {class: "pure-form"} do |s| %>
+
+    <div class="field">
+        <%= s.label :keywords %><br />
+        <%= s.text_field :keywords %>
+    </div>
+
+    <div class="field">
+        <p><%= s.label :asana_name, "Asana Name" %> - <%= s.text_field :asana_type, size: 25 %></p>
+    </div>
+
+    <div class="field">
+        <p><%= s.label :asana_type, "Asana Type" %> - <%= s.text_field :asana_type, size: 25 %></p>
+    </div>
+
+    <div class="field">
+        <p><%= s.label :target_general, "General Body Area" %> - <%= s.text_field :target_specific, size: 25 %></p>
+    </div>
+
+
+    <div class="actions">
+        <%= s.submit "Search", class: "pure-button pure-button-primary" %>
+    </div>
+
+<% end %>
+
+<p><%= link_to 'Back', asanas_path %></p>

@@ -29,22 +29,7 @@ class AsanasController < ApplicationController
     end
 
     def search
-        @asanas = Asana.where(["asana_name LIKE ?", "%params[asana_paramas]%"])
-        # redirect_to "/asanas/search/results"
-    end
-
-    def search_by_asana_name
-        @asana = Asana.find_by(asana_name: '')
-        redirect_to "/asanas/search/results"
-    end
-
-    def search_by_asana_type
-        @asana = Asana.all
-        redirect_to "/asanas/search/results"
-    end
-
-    def search_by_body_part
-        redirect_to "/asanas/search/results"
+        @asanas = Asana.search(params[:search])
     end
 
     def search_results
@@ -67,8 +52,11 @@ class AsanasController < ApplicationController
         redirect_to "/asanas/show/all"
     end
 
+
+
     private
-        def asana_params
-            params.require(:asana).permit(:asana_name, :asana_type, :target_general, :target_specific, :difficulty, :duration)
-        end
+
+    def asana_params
+        params.require(:asana).permit(:asana_name, :asana_type, :target_general, :target_specific, :difficulty, :duration)
+    end
 end

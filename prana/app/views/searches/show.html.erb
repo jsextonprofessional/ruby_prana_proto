@@ -1,0 +1,25 @@
+<h1>Results</h1>
+
+<p><%= link_to 'Back', new_search_path %></p>
+
+<% if @search.search_asanas.empty? %>
+
+    <p>No Records Found</p>
+
+<% else %>
+
+    <% @search.search_asanas.each do |result| %>
+    <br>
+
+    <div class="div">
+        <h1><%= result.asana_name %></h1>
+        <p>Asana Type: <%= result.asana_type %></p>
+        <p>General Body Area: <%= result.target_general %></p>
+        <p>Target Body Part: <%= result.target_specific %></p>
+        <p>Difficulty: <%= result.difficulty %></p>
+        <p>Duration: <%= result.duration %>minutes</p>
+    </div>
+
+    <% end %>
+
+<% end %>
