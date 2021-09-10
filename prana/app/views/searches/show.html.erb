@@ -1,6 +1,5 @@
-<h1 class="text-center m-5">Results</h1>
+<h1 class="text-center display-5 fw-lighter m-5">Results</h1>
 
-<p><%= link_to 'Back', new_search_path %></p>
 
 <% if @search.search_asanas.empty? %>
 
@@ -12,14 +11,17 @@
     <br>
 
     <div class="div">
-        <h1><%= result.asana_name %></h1>
-        <p>Asana Type: <%= result.asana_type %></p>
-        <p>General Body Area: <%= result.target_general %></p>
-        <p>Target Body Part: <%= result.target_specific %></p>
-        <p>Difficulty: <%= result.difficulty %></p>
-        <p>Duration: <%= result.duration %> minutes</p>
+    <hr class="text-info">
+        <h1 class="text-center display-6 fw-lighter mb-3"><%= result.asana_name %></h1>
+        <p class="text-center fs-3 fw-lighter mb-2">Asana Type: <%= result.asana_type %></p>
+        <p class="text-center fs-3 fw-lighter mb-2">General Body Area: <%= result.target_general %></p>
+        <p class="text-center fs-3 fw-lighter mb-2">Target Body Part: <%= result.target_specific %></p>
+        <p class="text-center fs-3 fw-lighter mb-2">Difficulty: <%= result.difficulty %></p>
+        <p class="text-center fs-3 fw-lighter mb-2">Duration: <%= result.duration %> minutes</p>
+        <hr class="text-info">
     </div>
 
     <% end %>
 
 <% end %>
+<p><%= link_to 'Back', new_search_path %></p>

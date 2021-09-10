@@ -1,9 +1,9 @@
-<h1 class="text-center m-5">Search Asanas By...</h1>
+<h1 class="text-center display-5 fw-lighter m-5">Search Asanas By...</h1>
 
 <%= form_for @search, html: {class: "pure-form"} do |s| %>
 
 <div class="row">
-    <div class="col">
+    <div class="col border-end border-info">
         <div class="field m-5 p-3">
             <%= s.label :asana_name, "Asana Name:" %><br> 
             <%= s.text_field :asana_name, size: 25 %>
@@ -16,11 +16,12 @@
         <div class="field m-5 p-3">
             <%= s.label :difficulty, "Difficulty:" %><br> <%= s.text_field :difficulty, size: 25 %>
         </div>
-
-
+        <div class="actions m-5">
+            <%= s.submit "Search", class: "pure-button pure-button-primary" %>
+        </div>
     </div>
 
-    <div class="col">
+    <div class="col border-start border-info">
         <div class="field m-5 p-3">
             <%= s.label :target_general, "General Body Area:" %><br> <%= s.text_field :target_general, size: 25 %>
         </div>
@@ -32,14 +33,10 @@
         <div class="field m-5 p-3">
             <%= s.label :duration, "Duration (minutes):" %><br> <%= s.text_field :duration, size: 25 %>
         </div>
-
-        <div class="actions m-5">
-            <%= s.submit "Search", class: "pure-button pure-button-primary" %>
-        </div>
+        <p class="text-decoration-none"><%= link_to 'Back', asanas_path %></p>
     </div>
 </div>
 
 <% end %>
 
-<p><%= link_to 'Back', asanas_path %></p>
 

@@ -1,14 +1,15 @@
-<h1 class="text-center mt-5 pt-5">Add a new asana to the database: </h1><br><br>
+<h1 class="text-center m-5 display-5 fw-lighter">Add a new asana to the database: </h1><br><br>
 <% if flash[:errors] %>
     <% flash[:errors].each do |error| %>
         <h4><%= error%></h4>
     <% end %>
 <% end %>
 <form action="/asanas" method="POST" class="m-5 row">
-<div class="col border-end">
+<div class="col border-end border-info">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <label>Asana Name:</label>
     <input type="text" name="asana[asana_name]" placeholder="asana name"><br><br>
+    <hr class="text-info">
     <label>Asana Type: </label><br><br>
     <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="asana[asana_type]" id="flexRadioDefault1" value="breathing">
@@ -83,6 +84,8 @@
         </label>
     </div>
     <br><br>
+    <hr class="text-info">
+
         <label>Difficulty Level:</label><br><br>
     <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="asana[difficulty]" id="flexRadioDefault1" value="">
@@ -102,6 +105,8 @@
         advanced
         </label>
     </div><br><br>
+    <hr class="text-info">
+
     <label>Duration:</label><br><br>
     <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="asana[duration]" id="flexRadioDefault1" value="1">
@@ -124,7 +129,7 @@
 
     </div>
 
-    <div class="col border-start">
+    <div class="col border-start border-info">
     <label>General Body Area: </label><br><br>
     <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="asana[target_general]" id="flexRadioDefault1" value="head">
@@ -174,6 +179,7 @@
         lower legs
         </label>
     </div><br><br>
+    <hr class="text-info">
     <label>Specific Body Part:</label><br><br>
     <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="asana[target_specific]" id="flexRadioDefault1" value="eyes">
