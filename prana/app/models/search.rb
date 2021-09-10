@@ -11,7 +11,6 @@ class Search < ActiveRecord::Base
         asanas = asanas.where(["difficulty LIKE ?", "%#{difficulty}%"]) if difficulty.present?
         asanas = asanas.where(["duration = ?", "%#{duration}%"]) if duration.present?
 
-
         return asanas
     
     end
